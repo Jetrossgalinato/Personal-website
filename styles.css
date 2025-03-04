@@ -137,8 +137,35 @@ h1 {
 .experience {
   background-color: #d1d1d1;
   color: black;
-  padding: 40px;
+  padding: 30px;
   border-radius: 15px;
   margin: 20px;
-  text-align: center;
+  text-align: left;
+}
+
+.experience h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.experience-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.experience-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.experience-details h4 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.experience-details p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
 }
