@@ -15,6 +15,7 @@ body {
   padding: 10px 30px;
   background-color: black;
   color: white;
+  position: relative;
 }
 
 .logo {
@@ -71,14 +72,45 @@ body {
   color: #bbbbbb;
 }
 
-.location-time {
-  text-align: right;
-  font-size: 14px;
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
 }
 
-.location-time strong {
-  display: block;
-  margin-top: 3px;
+.hamburger-menu span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  transition: 0.3s;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: black;
+    padding: 15px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
 }
 
 /* Hero Section */
@@ -133,15 +165,19 @@ h2 {
   gap: 10px;
 }
 
-.btn-outline {
-  border: 2px solid white;
-  background: transparent;
-  color: white;
+.btn-outline,
+.btn-solid {
   padding: 8px 12px;
   cursor: pointer;
   border-radius: 4px;
   font-size: 14px;
   transition: all 0.3s ease;
+}
+
+.btn-outline {
+  border: 2px solid white;
+  background: transparent;
+  color: white;
 }
 
 .btn-outline:hover {
@@ -153,11 +189,6 @@ h2 {
   border: none;
   background: white;
   color: black;
-  padding: 8px 12px;
-  cursor: pointer;
-  border-radius: 4px;
-  font-size: 14px;
-  transition: all 0.3s ease;
 }
 
 .btn-solid:hover {
